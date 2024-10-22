@@ -152,8 +152,7 @@
  }   
 @media screen and (max-width: 768px) {
     .searchfield{
-        width:330px;
-        margin: auto;
+       margin-left: -150px;
     }
     .searchfield button{
        font-size: small;
@@ -180,7 +179,7 @@
     }
 
     .logo {
-        margin: -15px;
+        margin: -45px;
     }
 
     .container {

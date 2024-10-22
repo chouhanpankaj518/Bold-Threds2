@@ -93,7 +93,7 @@ export default function Home({setshowcard}) {
 </div>
       
       
-      <Swiper
+      {/* <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay]} 
         spaceBetween={5} 
         navigation
@@ -145,7 +145,7 @@ export default function Home({setshowcard}) {
         <SwiperSlide className="flex items-center justify-center">
           <img src="https://m.media-amazon.com/images/I/A16YlCTQRlL._CLa%7C2140%2C2000%7C71QvkaS5vcL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png" alt="Slide 8" className="w-full h-full object-cover rounded-lg" />
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
       <br/>
       
   
@@ -156,13 +156,13 @@ export default function Home({setshowcard}) {
       {/* w-48 sm:w-72 md:w-72 lg:w-96 xl:w-80 h-72 md:h-80 xl:h-96 */}
 
 <div
-  className=' cardsb xl:h-96 h-52 rounded-md align-middle cursor-pointer overflow-hidden grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'
+  className=' cardsb  xl:h-96 h-52 rounded-md align-middle cursor-pointer overflow-hidden grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'
   onClick={() => navigate("/Tshirt")}
 >
-  <div className='xl:w-96 xl:h-full h-52 w-52 '>
+  <div className='xl:w-96  xl:h-full h-52 w-52 p-2'>
     <img
       src={cardTshirt}
-      className=' w-full h-full  align-middle'
+      className=' w-full h-full  align-middle mr-10 p-5'
       alt="Tshirt"
     />
   </div>
@@ -172,10 +172,10 @@ export default function Home({setshowcard}) {
   className=' cardsb xl:h-96 h-52 rounded-md align-middle cursor-pointer overflow-hidden grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'
   onClick={() => navigate("/bottom-wear")}
 >
-  <div className='xl:w-96 xl:h-full h-52 w-52 '>
+  <div className='xl:w-96 xl:h-full h-52 w-52 p-2'>
     <img
       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJQ6shZ9JVDI-tUgY7HhoxFfcQ6zLf1Tm-Jg&s"
-      className=' w-full h-full  align-middle'
+      className=' w-full h-full  align-middle p-5'
       alt="bottom-wear"
     />
   </div>
@@ -186,10 +186,10 @@ export default function Home({setshowcard}) {
   className=' cardsb xl:h-96 h-52 rounded-md align-middle cursor-pointer overflow-hidden grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'
   onClick={() => navigate("/Hoodie")}
 >
-  <div className='xl:w-96 xl:h-full h-52 w-52 '>
+  <div className='xl:w-96 xl:h-full h-52 w-52 p-2'>
     <img
       src={seasonal}
-      className=' w-full h-full  align-middle'
+      className=' w-full h-full  align-middle p-5'
       alt="Tshirt"
     />
   </div>
@@ -199,18 +199,23 @@ export default function Home({setshowcard}) {
   className=' cardsb xl:h-96 h-52 rounded-md align-middle cursor-pointer overflow-hidden grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'
   onClick={() => navigate("/seasonals")}
 >
-  <div className='xl:w-96 xl:h-full h-52 w-52 object-center'>
+  <div className='xl:w-96 xl:h-full h-52 w-52 object-center p-2'>
     <img
       src={clothing}
-      className=' w-full h-full  align-middle'
+      className=' w-full h-full  align-middle p-5'
       alt="/seasonals"
     />
   </div>
 </div>
+     </div>
+     
+     
+     
+  
 
-</div>
 
-      <br/>
+
+    
 
 
       <h1 className='font-semibold text-4xl text-center mt-5'>Latest Collection</h1>
@@ -281,9 +286,9 @@ export default function Home({setshowcard}) {
     productfilter.map((product, index) => (
       <div onClick={()=>hendlepage(product.id)} key={index} className='cursor-pointer flex-shrink-0 snap-center w-72 rounded-md overflow-hidden h-96 bg-white max-h-fit pb-10'> 
         <img src="https://media.istockphoto.com/id/991893524/photo/stylish-young-male-and-female-models-in-colorful-hoodies-sitting-on-chairs-on-white.webp?a=1&b=1&s=612x612&w=0&k=20&c=HlsYbtPQRka-6b0XlZYDpmFPZPtDGuFi-uNzTmL4bbA=" alt="" className='w-full h-52'/>
-        <div className='flex justify-around align-middle mt-3'>
+        <div className='flex justify-evenly align-middle mt-3'>
           <h2>{product.category}</h2>
-          <h2 className='border-5 border-black'>{product.price}</h2>
+          <h2 className='border-2 px-3 p-1 rounded-md border-black'>{product.price}</h2>
         </div>
         <p className='text-xs ml-3 mt-2 '>{product.title}</p>
         <button className='text-white ml-3 text-xs rounded-md p-2 mt-2 bg-black'>Order Now</button>
