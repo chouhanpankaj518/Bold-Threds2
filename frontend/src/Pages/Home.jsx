@@ -203,7 +203,7 @@ export default function Home({setshowcard}) {
     <img
       src={clothing}
       className=' w-full h-full  align-middle'
-      alt="Tshirt"
+      alt="/seasonals"
     />
   </div>
 </div>
